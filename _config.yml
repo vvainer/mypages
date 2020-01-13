@@ -1,2 +1,13 @@
+title: Test Jekill pathemes
+email: your-email@example.com
+description: >- # this means to ignore newlines until "baseurl:"
+  Testing Jekill themes on github
+baseurl: "/mypages" # the subpath of your site, e.g. /blog
+url: "https://vvainer.github.io/mypages" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: vitalik
+github_username:  vvainer
 # theme: jekyll-theme-cayman
 remote_theme: "mmistakes/minimal-mistakes@4.17.2"
+plugins:
+  - jekyll-feed
+  - jekyll-include-cache
