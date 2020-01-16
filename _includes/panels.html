@@ -1,0 +1,105 @@
+<!-- From slides3 framework -->
+{% if page.menu_contact_link == "email" %}
+  {% assign link = "mailto:" | append: site.email %}
+{% else %}
+  {% assign link = page.menu_contact_link %}
+{% endif %}
+{% if page.rtl %}
+  {% assign nav_slides = site.slides | where: "nav_target", true | sort: "slide_no" | reverse %} 
+  {% assign other_lang = "English &nbsp; &#x1f1fa;&#x1f1f8;" %}
+  {% assign other_lang_url = site.us_url %}
+{% else %}
+  {% assign nav_slides = site.slides | where: "nav_target", true | sort: "slide_no" %} 
+  {% assign other_lang = "עברית" %}
+  {% assign other_lang_url = site.il_url %}
+{% endif %}
+
+<!-- Navigation -->
+<nav class="side">
+  <div class="navigation">
+    <ul></ul>
+  </div>
+</nav>
+
+<!-- Panel Top #10 -->
+<nav class="panel top forceMobileView hideOnScroll oolm_color_1" style="opacity:0.6">
+  <div class="sections desktop">
+    <div class="left">
+      <ul class="menu uppercase crop">
+        <li><a href="#home"><img src="{{ site.logo_transparent_50x }}" alt="{{ site.logo_alt }}"
+            height="50" class="_logo"></a></li>  
+        <li><a href={{ other_lang_url }}>{{ other_lang }}</a></li>
+        <li><a href="http://twitter.com/"{{ site.twitter_username }} target="_blank"><svg class="twitterIcon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#twitter"></use></svg></a></li>
+      </ul>
+    </div>
+    <div class="center">
+      <ul class="menu uppercase crop">
+        
+        {% if page.rtl == true %}
+          <li><a href="{{ link }}">{{ page.menu_contact_name }}</a></li>
+        {% endif %}
+        {% for nav in nav_slides %}
+          <li><a href="#{{ nav.nav_tag }}">{{ nav.nav_name }}</a></li>
+        {% endfor %}
+        {% if page.rtl == false %}
+          <li><a href="{{ link }}">{{ page.menu_contact_name }}</a></li>
+        {% endif %}
+      </ul>
+    </div>
+    <div class="right"><a class="button menuButton round" href="{{ page.login }}">{{ page.login_title }}</a></div>
+  </div>
+  
+  <div class="sections compact hidden">
+    <div class="left">
+      <!--<a href="#" title="Brand Name"><svg style="width:107px;height:31px"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo"></use></svg></a>-->
+      <a href="#"><img src="{{ site.logo_transparent_50x }}" alt="{{ site.logo_alt }}" 
+            height="50" class="_logo"></a>
+    </div>
+    <div class="center"><a class="button menuButton round" href="{{ page.login }}">{{ page.login_title }}</a></div>
+    <div class="right"><span class="button actionButton sidebarTrigger" data-sidebar-id="1"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu"></use></svg></span></div>
+  </div>
+</nav>
+
+<!-- Sidebar -->
+<nav class="sidebar oolm_color_1" data-sidebar-id="1" style="opacity:0.95">
+  <div class="close"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close"></use></svg></div>
+  <div class="content">
+    <!--<a href="#" title="Brand Name" class="logo"><svg width="120" height="50"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo"></use></svg></a>-->
+    <ul class="mainMenu uppercase _right">
+      {% for nav in nav_slides %}
+        <li><a href="#{{ nav.nav_tag }}">{{ nav.nav_name }}</a></li>
+      {% endfor %}
+      <li><a href="{{ link }}">{{ page.menu_contact_name }}</a></li>
+    </ul>
+    <ul class="subMenu">
+      <li><a href={{ other_lang_url }}>{{ other_lang }}</a></li>
+    </ul>
+    <ul class="social">
+      <li><a href="#"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#twitter"></use></svg></a></li>
+      <li><a href="#"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#facebook"></use></svg></a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Panel Bottom #22 -->
+<nav class="panel bottom">
+  <div class="sections">
+    <div class="right"><span class="nextSlide"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#arrow-down"></use></svg></span></div>
+    <div class="right"><span data-dropdown-id="2" class="button actionButton dropdownTrigger"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#share"></use></svg></span></div>
+  </div>
+  <div class="sections compact hidden">
+    <div class="left"><nav><div class="navigation"><ul></ul></div></nav></div>
+    <div class="right"><span data-dropdown-id="2" class="button actionButton dropdownTrigger"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#share"></use></svg></span></div>
+  </div>
+</nav>
+
+<!-- Share Window -->
+<div class="dropdown share bottom right" data-dropdown-id="2" data-text="אתר שמפגיש הורים ומטפלים" data-url="https://onlyonelike.me" data-pinterest-image="https://onlyonelike.me/assets/i2/ooml-og-image.jpg">
+  <div class="title">{{ page.share_title }}</div>
+  <ul>
+    <li class="facebook"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#fb-like"></use></svg></li>
+    <li class="twitter"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#twitter"></use></svg></li>
+    <!--<li class="pinterest"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#pinterest"></use></svg></li>-->
+    <li class="mail oolm_color_1" data-subject="{{ page.share_by_email_subject }}" data-body=""><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#mail"></use></svg></li>
+  </ul>
+</div>

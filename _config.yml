@@ -1,0 +1,112 @@
+# Site _config.yml
+#
+
+# Locations
+collections_dir: collections
+# theme: minima
+layout: empty
+
+# Site defaults
+us_url: onlyonelike.me
+il_url: il.onlyonelike.me
+title: Only One Like Me - הורים פוגשים מטפלים
+tagline: מוצאים ומנהלים את הטיפול האופטימלי לילדכם
+description: >- # this means to ignore newlines until "baseurl:"
+  הורים ומטפלים נפגשים. 
+  מוצאים ובונים את הטיפול האופטימלי לילדכם תוך כדי ניצול הזכויות ושמירה על התקציב
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://onlyonelike.me" # the base hostname & protocol for your site, e.g. http://example.com
+email: info@onlyonelike.me
+twitter_username: ool_me
+author: ool_me
+locale: he_IL
+og_image: https://onlyonelike.me/assets/i2/ooml-og-image.jpg
+twitter_image: https://onlyonelike.me/assets/i2/ooml-og-image.jpg
+twitter:
+  username: ool_me
+  card: summary_large_image
+# facebook:
+#  publisher: #FB page URL
+#  admins: # user id of admin
+#  app_id:
+social:
+  links:
+    - http://twitter.com/ool_me
+    # add FB, linkedin, instagram
+  
+# Branding
+logo_alt: Only One Like Me
+logo_transparent_50x: assets/i2/logo_tr_50px.png
+logo: assets/i2/logo_tr_50px.png
+
+collections:
+  - slides
+
+# Defaults for the pages and posts
+defaults:
+  - scope:
+      path: "" # all files
+    values:
+      layout: empty
+      title: Only One Like Me - הורים פוגשים מטפלים
+      tagline: מוצאים ומנהלים את הטיפול האופטימלי לילדכם
+      description: >- # this means to ignore newlines until "baseurl:"
+        הורים ומטפלים נפגשים. 
+        מוצאים ובונים את הטיפול האופטימלי לילדכם תוך כדי ניצול הזכויות ושמירה על התקציב
+      baseurl: "" # the subpath of your site, e.g. /blog
+      url: "https://onlyonelike.me" # the base hostname & protocol for your site, e.g. http://example.com
+      email: info@onlyonelike.me
+      twitter_username: ool_me
+      twitter:
+        username: ool_me
+        card: summary_large_image
+      author: ool_me
+      locale: he_IL
+      lang: he_IL
+      rtl: true
+      og_image: https://onlyonelike.me/assets/i2/ooml-og-image.jpg
+      image: https://onlyonelike.me/assets/i2/ooml-og-image.jpg
+      twitter_image: https://onlyonelike.me/assets/i2/ooml-og-image.jpg
+      logo: assets/i2/logo_tr_50px.png
+      social:
+        links:
+          - http://twitter.com/ool_me
+          # add FB, linkedin, instagram
+
+#configure build
+strict_front_matter: true
+
+plugins:
+  - jekyll-feed
+  - github-pages-health-check
+  - github-pages
+  - jekyll-github-metadata
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+  # - jekyll-remote-theme
+
+# Exclude from processing.
+# The following items will not be processed, by default.
+# Any item listed under the `exclude:` key here will be automatically added to
+# the internal "default list".
+#
+# Excluded items can be processed by explicitly listing the directories or
+# their entries' file path in the `include:` list.
+#
+ 
+exclude:
+   - .sass-cache/
+   - .jekyll-cache/
+   - gemfiles/
+   - Gemfile
+   - Gemfile.lock
+   - library
+   - manual
+   - jekyll
+   - scss
+#   - node_modules/
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/
