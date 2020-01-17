@@ -1,5 +1,20 @@
+{% if page.rtl == true %}
+  {% assign direction = "right" %}
+{% else %}
+  {% assign direction = "left" %}
+{% endif %}
+{% capture form %}
+  <li class="col-5-10" style="float:{{ direction }}; overflow:auto">
+    <div class="ae-3">
+      <form action="{{ page.signup }}" autocomplete="off">
+        <input type="submit" class="button oolm_color_4 ae-5 fromBlur rounded stroke" name="submit_{{ page.nav_tag }}" value="{{ page.action_title }}"/>
+      </form>
+    </div>
+  </li>
+{% endcapture %}
+
 <!-- Slide 3 (#61) -->
-<section class="slide fade oolm_color_2 kenBurns"  data-name="solution">
+<section class="slide fade oolm_color_2 kenBurns"  data-name="{{ page.nav_tag }}">
   <div class="content">
     <div class="container">
       <div class="wrap">
@@ -7,41 +22,40 @@
         <div class="fix-12-12">
           <ul class="flex verticalTop">
             <li class="col-4-12 left ae-1">
-              <img class="_side_left margin-bottom-3" src="assets/i2/physical_therapy_kid_therapist.jpg" height="auto" width="auto" alt="Kid and therapist"/>
+              <img class="_side_left margin-bottom-3" src="{{ page.image_src }}" height="auto" width="auto" alt="{{ page.image_alt }}"/>
             </li>
-            <li class="col-8-12 right _right" style="margin-top:5%">
+            <li class="col-8-12 {{ direction }} _{{ direction }}" style="margin-top:5%">
               <ul class="flex">
-                <li class="col-5-10" style="float: right; overflow:auto">
-                  <div class="ae-3">
-                    <form action="#" autocomplete="off">
-                      <input type="submit" class="button oolm_color_4 ae-5 fromBlur rounded stroke" name="submit" value="בואו נתחיל"/>
-                    </form>
-                  </div>
-                </li>
+                {% if page.rtl == true %}
+                  {{ form }}
+                {% endif %}
                 <li class="col-5-10">
-                  <h1 class="ae-2">הפתרון שלנו</h1>
+                  <h1 class="ae-2">{{ page.h1 }}</h1>
                 </li>
+                {% if page.rtl == false %}
+                  {{ form }}
+                {% endif %}
               </ul>
               <ul class="flex grid-61 later">
                 <li class="col-6-12 ae-4">
-                  <i class="material-icons text-oolm_color_4">fingerprint</i>
-                  <h3>מידע מותאם אישית</h3>
-                  <p class="small">הנגשת המידע בצורה קלה</p>
+                  <i class="material-icons text-oolm_color_4">{{ page.i_1 }}</i>
+                  <h3>{{ page.h3_1 }}</h3>
+                  <p class="small">{{ page.p_1 }}</p>
                 </li>
                 <li class="col-6-12 ae-5">
-                  <i class="material-icons text-oolm_color_4">people_outline</i>
-                  <h3>התאמה ושידוך בין הורים למטפלים</h3>
-                  <p class="small">התאמה על פי המלצות, זמינות והתמחות רלוונטית</p>
+                  <i class="material-icons text-oolm_color_4">{{ page.i_2 }}</i>
+                  <h3>{{ page.h3_2 }}</h3>
+                  <p class="small">{{ page.p_2 }}</p>
                 </li>
                 <li class="col-6-12 ae-6">
-                  <i class="material-icons text-oolm_color_4">library_books</i>
-                  <h3>בניה וניהול של תוכנית טיפולים</h3>
-                  <p class="small">תוכנית טיפולים עקבית ומתואמת בין ההורים והמטפלים</p>
+                  <i class="material-icons text-oolm_color_4">{{ page.i_3 }}</i>
+                  <h3>{{ page.h3_3 }}</h3>
+                  <p class="small">{{ page.p_3 }}</p>
                 </li>
                 <li class="col-6-12 ae-7">
-                  <i class="material-icons text-oolm_color_4">attach_money</i>
-                  <h3>ניהול ההוצאות</h3>
-                  <p class="small">בצורה אופטימלית תוך מימוש זכויות לטיפולים והחזרים</p>
+                  <i class="material-icons text-oolm_color_4">{{ page.i_4 }}</i>
+                  <h3>{{ page.h3_3 }}</h3>
+                  <p class="small">{{ page.p_4 }}</p>
                 </li>
               </ul>
             </li>
