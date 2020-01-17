@@ -26,4 +26,5 @@ i_4: attach_money
 # graphics
 image_src: assets/i2/physical_therapy_kid_therapist.jpg
 image_alt: Kid and therapist
+bg_image: assets/i2/b11.jpg
 ---

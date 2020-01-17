@@ -1,44 +1,56 @@
-<!-- Slide #31 -->
+{% if page.rtl == true %}
+  {% assign direction = "right" %}
+{% else %}
+  {% assign direction = "left" %}
+{% endif %}
+
+{% if page.contact_url == "email" %}
+  {% assign link = "mailto:" | append: site.email %}
+{% else %}
+  {% assign link = page.contact_url %}
+{% endif %}
+
+!-- Slide #31 -->
 <section class="slide fade kenBurns fromRight" data-name="who">
   <div class="content">
     <div class="container">
       <div class="wrap">
           
         <div class="fix-12-12">
-          <h1 class="ae-1">?מי אנחנו</h1>
+          <h1 class="ae-1">{{ page.h1 }}</h1>
           <div class="ae-2">
-            <p>אנחנו הורים לילדים עם צרכים מיוחדים שאחרי שנים של טיפולים החליטו שהגיע זמן לטפל בבעיות שאנחנו והורים אחרים נתקלים בנסיון לתת את העתיד הטוב ביותר לילדנו</p>
+            <p>{{ page.h1_p}}</p>
           </div><p></p>
-          <ul class="flex reverse right _right">
-            <li class="col-1-12 right _right"></li>
-            <li class="col-5-12 right _right">
+          <ul class="flex reverse {{ direction }} _{{ direction }}">
+            <li class="col-1-12 {{ direction }} _{{ direction }}"></li>
+            <li class="col-5-12 {{ direction }} _{{ direction }}">
               <div class="relative">
-                <img width="60" class="avatar-31 ae-2 fromCenter margin-left-2" src="assets/i2/rachel-thumb.jpg" alt="Rachel Kahana-Samet"/>
+                <img width="60" class="avatar-31 ae-2 fromCenter margin-left-2" src="{{ page.h3_1_img }}" alt="{{ page.h3_1 }}"/>
                 <div class="quote-31">
-                  <h3 class="ae-4 margin-bottom-0">רחל כהנא סמט</h3>
-                  <div class="ae-5"><p class="small">אמא לאופק ושני אחיו ונשואה לקובי</p></div>
-                  <div class="ae-6"><p class="small"> אופק בן 12 ומאובחן בתסמונת נדירה ונמצא על הספקטרום האוטיסטי</p></div>
+                  <h3 class="ae-4 margin-bottom-0">{{ page.h3_1 }}</h3>
+                  <div class="ae-5"><p class="small">{{ page.h3_1_p1 }}</p></div>
+                  <div class="ae-6"><p class="small">{{ page.h3_1_p2 }}</p></div>
                 </div>
             </li>
             <li class="col-5-12 right _right ae-1 fromRight">
               <div class="relative">
-                <img width="60" class="avatar-31 ae-2 fromCenter margin-left-2" src="assets/i2/vitaly-thumb.jpg" alt="Vitaly Vainer"/>
+                <img width="60" class="avatar-31 ae-2 fromCenter margin-left-2" src="{{ page.h3_2_img }}" alt="{{ page.h3_2 }}"/>
                 <div class="quote-31">
-                  <h3 class="ae-4 margin-bottom-0">ויטלי ויינר</h3>
-                  <div class="ae-5"><p class="small">אבא לליאור ושני אחיו ונשוי לאנה</p></div>
-                  <div class="ae-6"><p class="small">ליאור בן 13 ומאובחן על הספקטרום האוטיסטי</p></div>
+                  <h3 class="ae-4 margin-bottom-0">{{ page.h3_2 }}</h3>
+                  <div class="ae-5"><p class="small">{{ page.h3_2_p1 }}</p></div>
+                  <div class="ae-6"><p class="small">{{ page.h3_2_p2 }}</p></div>
                 </div>
             </li>
-            <li class="col-1-12 right _right"></li>
+            <li class="col-1-12 {{ direction }} _{{ direction }}"></li>
           </ul>
           <div class="ae-2">
             <p></p>  
-            <h2 class="ae-2"> לכל שאלה או הצעה אתם מוזמנים ליצור קשר <a href="mailto:{{ site.email }}" class="text-oolm_color_4 underline">בדוא׳׳ל</a></h2></p>
+            <h2 class="ae-2"> {{ page.contact_text }} <a href="{{ link }}" class="text-oolm_color_4 underline">{{ page.contact_link_text }} </a></h2></p>
           </div>
         </div>
         
       </div>
     </div>
   </div>
-  <div class="background" style="background-image:url(assets/i2/b2.jpg)"></div>
+  <div class="background" style="background-image:url({{ page.bg_image }})"></div>
 </section>
