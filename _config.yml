@@ -7,19 +7,19 @@ collections_dir: collections
 layout: empty
 
 # Site defaults
-us_url: onlyonelike.me
-il_url: il.onlyonelike.me
-title: Only One Like Me - הורים פוגשים מטפלים
-tagline: מוצאים ומנהלים את הטיפול האופטימלי לילדכם
+us_url: https://onlyonelike.me
+il_url: https://il.onlyonelike.me
+title: Only One Like Me - Parents Meet Therapists
+tagline: Build and manage the best care for your child
 description: >- # this means to ignore newlines until "baseurl:"
-  הורים ומטפלים נפגשים. 
-  מוצאים ובונים את הטיפול האופטימלי לילדכם תוך כדי ניצול הזכויות ושמירה על התקציב
+  Parents and therapists meet. Build and manage the best care for your child 
+  while utilizing your child rights and eligibilities and keeping your expenses under control  
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://onlyonelike.me" # the base hostname & protocol for your site, e.g. http://example.com
 email: info@onlyonelike.me
 twitter_username: ool_me
 author: ool_me
-locale: he_IL
+locale: en_US
 og_image: https://onlyonelike.me/assets/i2/ooml-og-image.jpg
 twitter_image: https://onlyonelike.me/assets/i2/ooml-og-image.jpg
 twitter:
@@ -48,11 +48,11 @@ defaults:
       path: "" # all files
     values:
       layout: empty
-      title: Only One Like Me - הורים פוגשים מטפלים
-      tagline: מוצאים ומנהלים את הטיפול האופטימלי לילדכם
+      title: Only One Like Me - Parents Meet Therapists
+      tagline: Build and manage the best care for your child
       description: >- # this means to ignore newlines until "baseurl:"
-        הורים ומטפלים נפגשים. 
-        מוצאים ובונים את הטיפול האופטימלי לילדכם תוך כדי ניצול הזכויות ושמירה על התקציב
+        Parents and therapists meet. Build and manage the best care for your child 
+        while utilizing your child rights and eligibilities and keeping your expenses under control  
       baseurl: "" # the subpath of your site, e.g. /blog
       url: "https://onlyonelike.me" # the base hostname & protocol for your site, e.g. http://example.com
       email: info@onlyonelike.me
@@ -61,9 +61,9 @@ defaults:
         username: ool_me
         card: summary_large_image
       author: ool_me
-      locale: he_IL
-      lang: he_IL
-      rtl: true
+      locale: en_US
+      lang: en_US
+      rtl: false
       og_image: https://onlyonelike.me/assets/i2/ooml-og-image.jpg
       image: https://onlyonelike.me/assets/i2/ooml-og-image.jpg
       twitter_image: https://onlyonelike.me/assets/i2/ooml-og-image.jpg

@@ -10,7 +10,7 @@
   {% assign other_lang_url = site.us_url %}
 {% else %}
   {% assign nav_slides = site.slides | where: "nav_target", true | sort: "slide_no" %} 
-  {% assign other_lang = "עברית" %}
+  {% assign other_lang = "🇮🇱 עברית" %}
   {% assign other_lang_url = site.il_url %}
 {% endif %}
 
@@ -29,7 +29,7 @@
         <li><a href="#home"><img src="{{ site.logo_transparent_50x }}" alt="{{ site.logo_alt }}"
             height="50" class="_logo"></a></li>  
         <li><a href={{ other_lang_url }}>{{ other_lang }}</a></li>
-        <li><a href="http://twitter.com/"{{ site.twitter_username }} target="_blank"><svg class="twitterIcon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#twitter"></use></svg></a></li>
+        <li><a href="http://twitter.com/{{ site.twitter_username }}" target="_blank"><svg class="twitterIcon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#twitter"></use></svg></a></li>
       </ul>
     </div>
     <div class="center">

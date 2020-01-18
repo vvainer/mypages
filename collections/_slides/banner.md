@@ -6,9 +6,9 @@ nav_target: false
 nav_tag: home
 
 # texts
-h1: הורים ומטפלים נפגשים
-h2: בואו נמצא לילדכם את הטיפול הטוב ביותר
-action_title: אני רוצה להתחיל
+h1: Parents meet therapists
+h2: Find best therapy for your children special needs
+action_title: Let's start
 
 # graphics
 bg_image: assets/i2/family_therapist.jpg
