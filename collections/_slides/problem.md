@@ -1,5 +1,4 @@
 ---
-
 layout: header-4-topics
 slide_no: 2
 category: homepage
@@ -7,20 +6,24 @@ nav_target: false
 nav_tag: why
 
 # texts
-h1: No silver bullet for all the challenges 
-h2: Many therapies can improve quality of life for your child
-action_title: "Let's find therapists"
-h3_1: 'How do I find just the relevant information?'
-p_1: 'Information is scattered across many sources, not always up to date and the majority of it is irrelevant to your needs'
+h1: אין תרופת קסם לכל האתגרים של ילדינו
+h2: ישנם טיפולים רבים שיכולים לשפר את איכות חייהם
+action_title: בואו נמצא מטפלים
+h3_1: '?איך מוצאים מידע ולא טובעים בו'
+p_1: 'המידע מפוזר בין מקורות רבים, לא תמיד עדכני ובעיקר רובו לא רלוונטי לילד שלי'
 i_1: fingerprint
-h3_2: 'How do I find professional therapists, tutors, and caregivers?'
-p_2: 'Do they have experience with the particular diagnosis or goals we set? Are they available at the time and location that we need? How can we cover the treatment?'
+h3_2: > # this means to ignore newlines 
+  ?איך מוצאים מטפלים מקצועיים, תרפיסטים, משלבים
+p_2: > # this means to keep newlines 
+  ?יש להם ניסיון עם המצב או המטרות שהצבנו
+  <br> ? הם זמינים בשעות שמתאימות לנו  
+  ?אפשר לקבל החזרים  
 i_2: people_outline
-h3_3: 'How to manage and share therapy notes?'
-p_3: No one manages non-medical therapy notes for us or follow and align on the goals of our child development
+h3_3: '?איך לנהל ולשתף תיק טיפולים'
+p_3: אף אחד לא מנהל תיק טיפולים שאינם רפואיים עבורנו או עוקב ומתאם את המטרות וההתקדמות של ילדנו
 i_3: library_books
-h3_4: "It's expensive, how can I fund the therapy?"
-p_4: Our children are eligible for the therapies and coverage from goverment and municipal programs, insurance and NGOs
+h3_4: '?זה יקר, מאיפה אממן את הטיפולים'
+p_4: 'לילדנו מגיעות זכויות לטיפולים והחזרים מקופת חולים, מוסדות חינוך, היישוב שבו אתם מתגוררים ומעמותות'
 i_4: attach_money
 
 # graphics

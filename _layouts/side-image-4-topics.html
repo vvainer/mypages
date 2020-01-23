@@ -4,7 +4,7 @@
   {% assign direction = "left" %}
 {% endif %}
 {% capture form %}
-  <li class="col-5-10" style="float:{{ direction }}; overflow:auto">
+  <li class="col-3-12" style="float:{{ direction }}; overflow:auto">
     <div class="ae-3">
       <form action="{{ page.signup }}" autocomplete="off">
         <input type="submit" class="button oolm_color_4 ae-5 fromBlur rounded stroke" name="submit_{{ page.nav_tag }}" value="{{ page.action_title }}"/>
@@ -26,12 +26,11 @@
             </li>
             <li class="col-8-12 {{ direction }} _{{ direction }}" style="margin-top:5%">
               <ul class="flex">
-                {% if page.rtl == true %}
-                  {{ form }}
-                {% endif %}
-                <li class="col-5-10">
+                
+                <li class="col-9-12">
                   <h1 class="ae-2">{{ page.h1 }}</h1>
                 </li>
+                {{ form }}
                 {% if page.rtl == false %}
                   {{ form }}
                 {% endif %}
@@ -54,7 +53,7 @@
                 </li>
                 <li class="col-6-12 ae-7">
                   <i class="material-icons text-oolm_color_4">{{ page.i_4 }}</i>
-                  <h3>{{ page.h3_3 }}</h3>
+                  <h3>{{ page.h3_4 }}</h3>
                   <p class="small">{{ page.p_4 }}</p>
                 </li>
               </ul>

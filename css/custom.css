@@ -20,6 +20,12 @@
     }
   }
 
+  @media (max-width: 1023px) {
+    img._side_left {
+      display:none;
+    }
+  }
+
   @media (min-width: 1024px) {
     img._side_right {
       border-radius: 16px;
