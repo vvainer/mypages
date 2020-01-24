@@ -6,9 +6,7 @@
 {% capture form %}
   <li class="col-3-12" style="float:{{ direction }}; overflow:auto">
     <div class="ae-3">
-      <form action="{{ page.signup }}" autocomplete="off">
-        <input type="submit" class="button oolm_color_5 fromBlur rounded stroke" name="submit_{{ page.nav_tag }}" value="{{ page.action_title }}"/>
-      </form>
+      <button class="button popupTrigger rounded stroke fromBlur sourceSans oolm_color_5 ae-5" data-popup-id="subscribe">{{ page.action_title }}</button>
     </div>
   </li>
 {% endcapture %}
