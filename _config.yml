@@ -41,6 +41,12 @@ logo: assets/i2/logo_tr_50px.png
 
 collections:
   - slides
+# strings
+strings:
+  popup_close: "סגור"
+
+chatbot:
+  subscribe_url: "https://do.formito.com/e/1o0"
 
 # Defaults for the pages and posts
 defaults:

@@ -48,7 +48,9 @@
         {% endif %}
       </ul>
     </div>
-    <div class="right"><a class="button menuButton round" href="{{ page.login }}">{{ page.login_title }}</a></div>
+    <div class="right">
+      <a class="button dialogTrigger menuButton rounded"  data-dialog-id="login" href="{{ page.login }}">{{ page.login_title }}</a>
+    </div>
   </div>
   
   <div class="sections compact hidden">
@@ -57,7 +59,9 @@
       <a href="#"><img src="{{ site.logo_transparent_50x }}" alt="{{ site.logo_alt }}" 
             height="50" class="_logo"></a>
     </div>
-    <div class="center"><a class="button menuButton round" href="{{ page.login }}">{{ page.login_title }}</a></div>
+    <div class="center">
+      <a class="button dialogTrigger menuButton rounded"  data-dialog-id="login" href="{{ page.login }}">{{ page.login_title }}</a>
+    </div>
     <div class="right"><span class="button actionButton sidebarTrigger" data-sidebar-id="1"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu"></use></svg></span></div>
   </div>
 </nav>
