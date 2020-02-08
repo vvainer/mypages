@@ -17,31 +17,34 @@
 {% endif %}
 
 <!-- Navigation -->
-<nav class="side {{ nav_side }}">
+<nav class="side pole large left">
   <div class="navigation">
     <ul></ul>
   </div>
 </nav>
 
+
 <!-- Panel Top #10 -->
-<nav class="panel top forceMobileView hideOnScroll oolm_color_1" style="opacity:0.6">
+<nav class="panel top forceMobileView hideOnScroll oolm_color_1 opacity-9">
   <div class="sections desktop">
     <div class="left">
       <ul class="menu uppercase crop">
         <li><a href="#home"><img src="{{ site.logo_transparent_50x }}" alt="{{ site.logo_alt }}"
             height="50" class="_logo"></a></li>  
+            <!--
         <li><a href={{ other_lang_url }}>{{ other_lang }}</a></li>
         <li><a href="http://twitter.com/{{ site.twitter_username }}" target="_blank"><svg class="twitterIcon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#twitter"></use></svg></a></li>
+        -->
       </ul>
     </div>
     <div class="center">
-      <ul class="menu uppercase crop">
+      <ul class="menu crop">
         
         {% if page.rtl == true %}
-          <li><a href="{{ link }}">{{ page.menu_contact_name }}</a></li>
+          <li><a href="{{ link }}"   style="font-size: 30px;">{{ page.menu_contact_name }}</a></li>
         {% endif %}
         {% for nav in nav_slides %}
-          <li><a href="#{{ nav.nav_tag }}">{{ nav.nav_name }}</a></li>
+          <li><a href="#{{ nav.nav_tag }}"    style="font-size: 20px;!important">{{ nav.nav_name }}</a></li>
         {% endfor %}
         {% if page.rtl == false %}
           <li><a href="{{ link }}">{{ page.menu_contact_name }}</a></li>
@@ -49,7 +52,7 @@
       </ul>
     </div>
     <div class="right">
-      <a class="button dialogTrigger menuButton rounded"  data-dialog-id="login" href="{{ page.login }}">{{ page.login_title }}</a>
+      <a class="button dialogTrigger menuButton rounded blue gradient"  data-dialog-id="login" href="{{ page.login }}">{{ page.login_title }}</a>
     </div>
   </div>
   
@@ -60,7 +63,7 @@
             height="50" class="_logo"></a>
     </div>
     <div class="center">
-      <a class="button dialogTrigger menuButton rounded"  data-dialog-id="login" href="{{ page.login }}">{{ page.login_title }}</a>
+      <a class="button dialogTrigger menuButton rounded  blue gradient"  data-dialog-id="login" href="{{ page.login }}">{{ page.login_title }}</a>
     </div>
     <div class="right"><span class="button actionButton sidebarTrigger" data-sidebar-id="1"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu"></use></svg></span></div>
   </div>
@@ -77,6 +80,7 @@
       {% endfor %}
       <li><a href="{{ link }}">{{ page.menu_contact_name }}</a></li>
     </ul>
+    <!--
     <ul class="subMenu">
       <li><a href={{ other_lang_url }}>{{ other_lang }}</a></li>
     </ul>
@@ -84,13 +88,14 @@
       <li><a href="#"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#twitter"></use></svg></a></li>
       <li><a href="#"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#facebook"></use></svg></a></li>
     </ul>
+    -->
   </div>
 </nav>
 
 <!-- Panel Bottom #22 -->
 <nav class="panel bottom">
   <div class="sections">
-    <div class="right"><span class="nextSlide"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#arrow-down"></use></svg></span></div>
+    <div class="center"><span class="nextSlide"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#arrow-down"></use></svg></span></div>
     <div class="right"><span data-dropdown-id="2" class="button actionButton dropdownTrigger"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#share"></use></svg></span></div>
   </div>
   <div class="sections compact hidden">

@@ -41,6 +41,8 @@ logo: assets/i2/logo_tr_50px.png
 
 collections:
   - slides
+  - therapists
+  
 # strings
 strings:
   popup_close: "סגור"

@@ -1,7 +1,9 @@
 {% if page.rtl == true %}
   {% assign direction = "right" %}
+  {% assign rtl_ltr = "rtl" %}
 {% else %}
   {% assign direction = "left" %}
+  {% assign rtl_ltr = "" %}
 {% endif %}
 
 {% if page.contact_url == "email" %}

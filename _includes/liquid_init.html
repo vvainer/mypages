@@ -1,0 +1,13 @@
+{% if page.rtl == true %}
+  {% assign alignment = "right" %}
+  {% assign direction = "rtl" %}
+{% else %}
+  {% assign alignment = "left" %}
+  {% assign direction = "" %}
+{% endif %}
+
+{% if page.contact_url == "email" %}
+  {% assign link = "mailto:" | append: site.email %}
+{% else %}
+  {% assign link = page.contact_url %}
+{% endif %}

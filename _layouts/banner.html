@@ -1,8 +1,10 @@
+{% include liquid_init.html %}
+
 <!-- Slide 1 (#13) -->
 <section class="slide autoHeight fade kenBurns zoomout oolm_color_2" data-name="{{ page.nav_tag }}">
-  <div class="content">
+  <div class="content {{ direction }}">
     <div class="container">
-      <div class="wrap">
+      <div class="wrap {{ direction }}">
         <div class="fix-10-12">
           <div class="ae-2 crop">
             <h1 class="huge">{{ page.h1 }}</h1>
@@ -11,7 +13,7 @@
             <h2>{{ page.h2 }}</h2><p></p>
           </div>
           <div class="ae-3">
-            <button class="button popupTrigger rounded fromBlur white sourceSans oolm_color_4 ae-5" data-popup-id="subscribe">{{ page.action_title }}</button>
+            <button class="button popupTrigger rounded fromBlur white sourceSans oolm_color_4 ae-5" data-popup-id="subscribe" tabindex="0">{{ page.action_title }}</button>
           </div>
         </div>
                 

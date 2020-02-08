@@ -1,57 +1,30 @@
 <!doctype html>
 <html>
 	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
-		<meta name="apple-mobile-web-app-capable" content="yes" />
-
-    <!-- Favicons and home page icons -->
-    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/manifest.json">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-    <link rel="shortcut icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
-
-    <!-- Add SEO tags based on -->
-    {% seo %}
-
-    <link rel="canonical" href="{{ page.url }}">
-		<!-- Page Title -->
-		<title>{{ page.title }}</title>
+		{% include site_meta.html %}
 
 		<!-- Fonts and Material Icons -->
-		<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700|Roboto|Material+Icons" rel="stylesheet" type="text/css"/>
-		
-		<!-- Styles -->
-		<link href="css/slides.min.css" rel="stylesheet" type="text/css">
+		<!--<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700|Roboto|Material+Icons" rel="stylesheet" type="text/css"/>-->
+		<link rel="stylesheet" as="font" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,600,800|Roboto:700|Roboto:500|Material+Icons"/>
+
+    <!-- Compressed Styles -->
+    <link href="css/slides.min.css?425341" rel="stylesheet" type="text/css">
 
 		<!-- Custom Styles -->
     <link href="css/custom.css" rel="stylesheet" type="text/css">
 
 		<!-- Scripts -->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-		<script src="js/plugins.js" type="text/javascript" name="plugins"></script>
-		<script src="js/slides.js" type="text/javascript" name="main-scripts"></script>
-
+		<!-- jQuery 3.4.1 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<!-- Compressed Scripts -->
+	  <script src="js/slides.min.js?425341" type="text/javascript"></script>
+    <!-- plugins -->
+    <!-- script src="js/plugins.js" type="text/javascript" name="plugins"></script> -->
 		<!-- Custom Scripts -->
 		<!--script src="js/custom.js" type="text/javascript" name="custom-scripts"></script-->
 		 
-    <!--<script src="https://widget.flowxo.com/embed.js" data-fxo-widget="eyJ0aGVtZSI6IiMwZWNhYzkiLCJ3ZWIiOnsiYm90SWQiOiI1ZTI3M2RhM2UxY2E0ZDQyMjc4YzY1MmQiLCJ0aGVtZSI6IiMwZWNhYzkiLCJsYWJlbCI6IteR15XXkNeVINeg15PXkdeoIn0sIndlbGNvbWVUZXh0Ijoi15PXoNeULCDXnteg15TXnNeqINeq15vXoNeZ16og15jXmdek15XXnNeZ150ifQ==" async defer></script>-->
-    <!--<script async>!function(w,d,s,t,a){w.formito_form='1o0';t=d.createElement(s),t.async=!0,t.src='//script.formito.com/v1/formito.js',a=d.getElementsByTagName(s)[0],a.parentNode.insertBefore(t,a)}(window,document,'script');</script>-->
 	</head>
-	<body class="slides smooth simplifiedMobile smoothScroll animated">
+	<body class="slides cards noPreload animated">
 
 {% include svg-symbols.html %}
 {% include under_construction_popup.html %}
@@ -63,8 +36,6 @@
   {{ slide }} 
 {% endfor %}
 
-<!-- Preloader -->
-<div class="loadingIcon"><svg class="loading-icon" id="loading-circle" viewBox="0 0 18 18"><circle class="circle" opacity=".1" stroke="#fff" stroke-width="2" stroke-miterlimit="10" cx="9" cy="9" r="8" fill="none"></circle><circle class="dash" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" stroke-dasharray="1,100" cx="9" cy="9" r="8" fill="none"></circle></svg></div>
-					
+			
 	</body>
 </html>
